@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Lucidd</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #0F0F13;
+      --card:       #18181F;
+      --border:     #2A2A35;
+      --accent:     #A78BFA;
+      --accent-dim: rgba(167,139,250,0.12);
+      --text:       #F2F2F7;
+      --text-muted: #9B9BAE;
+      --text-dim:   #5A5A72;
+      --green:      #34D399;
+      --yellow:     #FBBF24;
+      --red:        #EF4444;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      padding: 0 16px 80px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 64px 0 40px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(167,139,250,0.25);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(28px, 6vw, 48px);
+      color: var(--text);
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span { color: var(--accent); }
+
+    .hero-sub {
+      color: var(--text-muted);
+      font-size: 15px;
+      max-width: 480px;
+      margin: 0 auto 20px;
+    }
+
+    .hero-date {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+
+    .hero-date::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    /* ── Layout ── */
+    .content {
+      max-width: 680px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+    }
+
+    .card-label {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .card h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--text);
+      letter-spacing: -0.3px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    /* ── Disclaimer card ── */
+    .card-disclaimer {
+      background: rgba(167,139,250,0.06);
+      border-color: rgba(167,139,250,0.2);
+    }
+
+    .card-disclaimer h2 { color: var(--accent); }
+
+    /* ── Warning card ── */
+    .card-warning {
+      background: rgba(251,191,36,0.05);
+      border-color: rgba(251,191,36,0.2);
+    }
+
+    .card-warning .card-label { color: var(--yellow); }
+    .card-warning h2 { color: var(--yellow); }
+
+    /* ── List ── */
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    li::before {
+      content: '›';
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.4;
+      flex-shrink: 0;
+    }
+
+    /* ── Rights grid ── */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .right-item {
+      background: var(--accent-dim);
+      border: 1px solid rgba(167,139,250,0.15);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+
+    .right-item-icon { font-size: 20px; margin-bottom: 6px; }
+
+    .right-item-title {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .right-item-desc {
+      font-size: 12px;
+      color: var(--text-dim);
+      line-height: 1.5;
+    }
+
+    /* ── Links ── */
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(167,139,250,0.3);
+      transition: border-color 0.2s;
+    }
+
+    a:hover { border-color: var(--accent); }
+
+    /* ── Contact card ── */
+    .card-contact {
+      text-align: center;
+    }
+
+    .card-contact .contact-emoji {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .card-contact h2 { text-align: center; }
+
+    .contact-email {
+      display: inline-block;
+      margin-top: 12px;
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      padding: 10px 20px;
+      border-radius: 12px;
+      border: 1px solid rgba(167,139,250,0.2);
+      text-decoration: none;
+      border-bottom: none;
+    }
+
+    .contact-email:hover {
+      background: rgba(167,139,250,0.2);
+      border-bottom: none;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 16px 0;
+    }
+
+    strong.hi { color: var(--text); }
+
+    /* ── Footer ── */
+    .footer {
+      max-width: 680px;
+      margin: 32px auto 0;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-badge">Legal</div>
+    <h1>Privacy <span>Policy</span></h1>
+    <p class="hero-sub">How Lucidd collects, uses, and protects your information.</p>
+    <span class="hero-date">Effective date: April 8, 2026</span>
+  </div>
+
+  <div class="content">
+
+    <!-- Intro -->
+    <div class="card">
+      <div class="card-label">Overview</div>
+      <h2>About This Policy</h2>
+      <p>This Privacy Policy applies to the <strong class="hi">Lucidd</strong> mobile application, developed by <strong class="hi">Licvora Labs</strong> ("we", "us", or "our").</p>
+      <p>This app is provided as a Freemium service and is intended for use "AS IS". By using the Application, you agree to the collection and use of information as described in this policy.</p>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="card card-disclaimer">
+      <div class="card-label">Important</div>
+      <h2>Not a Medical App</h2>
+      <p>This application does <strong>not</strong> provide medical advice, diagnosis, or treatment. It is intended for general wellness and informational purposes only. Always consult a qualified healthcare professional for medical or mental health concerns.</p>
+    </div>
+
+    <!-- Account data -->
+    <div class="card">
+      <div class="card-label">Account</div>
+      <h2>Account Information</h2>
+      <p>When you create an account, we collect:</p>
+      <ul>
+        <li><strong class="hi">Email address</strong> — used for authentication and account recovery</li>
+        <li><strong class="hi">Display name</strong> — used to personalize your in-app experience</li>
+      </ul>
+      <div class="divider"></div>
+      <p>This data is stored securely via <strong class="hi">Firebase Authentication</strong> and is never sold to third parties.</p>
+    </div>
+
+    <!-- Sensitive data -->
+    <div class="card card-warning">
+      <div class="card-label">Sensitive Data</div>
+      <h2>Mental Health & Wellness Data</h2>
+      <p>To deliver its core features, Lucidd collects information that may be considered sensitive personal data:</p>
+      <ul>
+        <li><strong class="hi">Mood check-ins</strong> — daily emotional state and selected activities</li>
+        <li><strong class="hi">Sleep logs</strong> — hours slept and sleep quality ratings</li>
+        <li><strong class="hi">Journal entries</strong> — free-text personal writing stored privately</li>
+        <li><strong class="hi">AI conversation history</strong> — messages exchanged with the in-app AI assistant</li>
+        <li><strong class="hi">Challenge & article progress</strong> — daily task completion and streaks</li>
+      </ul>
+      <div class="divider"></div>
+      <p>This data is processed solely to provide and improve the Application's features. It is stored in your private account and is not shared with other users or used for advertising.</p>
+      <p>The legal basis for processing this data is your explicit <strong class="hi">consent</strong>, given when you create an account and use the app's features.</p>
+    </div>
+
+    <!-- Device data -->
+    <div class="card">
+      <div class="card-label">Device & Usage</div>
+      <h2>Automatically Collected Data</h2>
+      <p>We may collect the following automatically when you use the Application:</p>
+      <ul>
+        <li>Device information (e.g. operating system, device model)</li>
+        <li>Usage data (features used, time spent in app)</li>
+        <li>IP address (collected by Firebase infrastructure)</li>
+      </ul>
+      <div class="divider"></div>
+      <p>We do <strong class="hi">not</strong> collect precise location data.</p>
+      <p>Some data is cached locally on your device using <strong class="hi">AsyncStorage</strong> to allow the app to work offline and load faster. This data stays on your device and is not transmitted unless you are signed in.</p>
+    </div>
+
+    <!-- AI -->
+    <div class="card">
+      <div class="card-label">AI Features</div>
+      <h2>Artificial Intelligence</h2>
+      <p>The Application uses AI to power the chat assistant and provide personalized insights. When you interact with the AI feature, your messages are sent to <strong class="hi">OpenAI</strong> for processing.</p>
+      <p>OpenAI may process and temporarily store these messages in accordance with their own privacy policy. We recommend reviewing <a href="https://openai.com/privacy" target="_blank">OpenAI's Privacy Policy</a> for full details.</p>
+      <p>We do not use AI to make automated decisions that produce legal or similarly significant effects on users.</p>
+    </div>
+
+    <!-- Third party -->
+    <div class="card">
+      <div class="card-label">Third Parties</div>
+      <h2>Third-Party Services</h2>
+      <p>The Application integrates the following third-party services. Each has its own privacy policy governing how it handles your data:</p>
+      <ul>
+        <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Authentication</a> — account management</li>
+        <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Firestore</a> — cloud storage of your app data</li>
+        <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Analytics</a> — anonymous usage analytics</li>
+        <li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a> — Android platform services</li>
+        <li><a href="https://openai.com/privacy" target="_blank">OpenAI</a> — AI assistant processing</li>
+        <li><strong class="hi">Subscription provider</strong> — manages in-app purchases and subscriptions</li>
+      </ul>
+    </div>
+
+    <!-- In-app purchases -->
+    <div class="card">
+      <div class="card-label">Subscriptions</div>
+      <h2>In-App Purchases</h2>
+      <p>Lucidd offers a Freemium model with optional paid subscriptions. Payment processing is handled entirely by <strong class="hi">Google Play</strong> (Android). We do not collect or store your payment card information.</p>
+      <p>Purchase history and subscription status may be shared with our subscription management provider to verify your access level within the app.</p>
+    </div>
+
+    <!-- Data export -->
+    <div class="card">
+      <div class="card-label">Portability</div>
+      <h2>Data Export</h2>
+      <p>You can export a copy of your personal data — including check-in history, journal entries, and AI analyses — directly from the app via <strong class="hi">Settings → Export my data</strong>. The export is generated as a PDF file saved to your device.</p>
+    </div>
+
+    <!-- User rights -->
+    <div class="card">
+      <div class="card-label">Your Rights (GDPR)</div>
+      <h2>User Rights</h2>
+      <p>If you are located in the European Union or European Economic Area, you have the following rights regarding your personal data:</p>
+
+      <div class="rights-grid">
+        <div class="right-item">
+          <div class="right-item-icon">👁️</div>
+          <div class="right-item-title">Access</div>
+          <div class="right-item-desc">Request a copy of the data we hold about you.</div>
+        </div>
+        <div class="right-item">
+          <div class="right-item-icon">✏️</div>
+          <div class="right-item-title">Rectification</div>
+          <div class="right-item-desc">Correct inaccurate or incomplete data.</div>
+        </div>
+        <div class="right-item">
+          <div class="right-item-icon">🗑️</div>
+          <div class="right-item-title">Erasure</div>
+          <div class="right-item-desc">Request deletion of your personal data.</div>
+        </div>
+        <div class="right-item">
+          <div class="right-item-icon">📦</div>
+          <div class="right-item-title">Portability</div>
+          <div class="right-item-desc">Receive your data in a portable format.</div>
+        </div>
+        <div class="right-item">
+          <div class="right-item-icon">🚫</div>
+          <div class="right-item-title">Objection</div>
+          <div class="right-item-desc">Object to certain types of processing.</div>
+        </div>
+        <div class="right-item">
+          <div class="right-item-icon">⏸️</div>
+          <div class="right-item-title">Restriction</div>
+          <div class="right-item-desc">Request we limit how we use your data.</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <p>To exercise any of these rights, contact us at <a href="mailto:getlucidd.app@gmail.com">getlucidd.app@gmail.com</a>. We will respond within 30 days.</p>
+    </div>
+
+    <!-- Account deletion -->
+    <div class="card">
+      <div class="card-label">Account Deletion</div>
+      <h2>Delete Your Account</h2>
+      <p>You can request full deletion of your account and all associated data (mood history, journal entries, sleep logs, AI conversations, and account credentials) at any time by contacting us at <a href="mailto:getlucidd.app@gmail.com">getlucidd.app@gmail.com</a> with the subject line <strong class="hi">"Delete my account"</strong>.</p>
+      <p>We will process your request within <strong class="hi">14 days</strong> and confirm deletion by email.</p>
+    </div>
+
+    <!-- Retention -->
+    <div class="card">
+      <div class="card-label">Retention</div>
+      <h2>Data Retention</h2>
+      <p>We retain your data for as long as your account is active or as needed to provide the service. If you delete your account, all personal data is permanently removed from our systems within 14 days.</p>
+      <p>Some anonymized, aggregated data may be retained for analytics purposes and cannot be linked back to you.</p>
+    </div>
+
+    <!-- Children -->
+    <div class="card">
+      <div class="card-label">Age Restrictions</div>
+      <h2>Children's Privacy</h2>
+      <p>This Application is not intended for children under the age of <strong class="hi">13</strong> (or under <strong class="hi">16</strong> in the European Union, where a higher age threshold applies for digital consent).</p>
+      <p>We do not knowingly collect personal data from children. If you believe a child has provided us with personal data, please contact us and we will delete it promptly.</p>
+    </div>
+
+    <!-- Security -->
+    <div class="card">
+      <div class="card-label">Security</div>
+      <h2>Data Security</h2>
+      <p>We take reasonable technical and organizational measures to protect your data from unauthorized access, alteration, disclosure, or destruction. All data transmitted between the app and our servers is encrypted in transit using industry-standard protocols.</p>
+      <p>However, no method of transmission over the internet is 100% secure. We cannot guarantee absolute security.</p>
+    </div>
+
+    <!-- Changes -->
+    <div class="card">
+      <div class="card-label">Updates</div>
+      <h2>Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. When we do, we will update the effective date at the top of this page. For significant changes, we may notify you within the app.</p>
+      <p>Continued use of the Application after changes are posted constitutes your acceptance of the updated policy.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="card card-contact">
+      <div class="contact-emoji">✉️</div>
+      <div class="card-label" style="text-align:center;">Contact</div>
+      <h2>Get in Touch</h2>
+      <p style="color:var(--text-muted);">Questions about privacy? We're here to help.</p>
+      <a class="contact-email" href="mailto:getlucidd.app@gmail.com">getlucidd.app@gmail.com</a>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>© 2026 Licvora Labs · Lucidd</p>
+  </div>
+
+</body>
+</html>

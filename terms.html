@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms & Conditions — Lucidd</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #0F0F13;
+      --card:       #18181F;
+      --border:     #2A2A35;
+      --accent:     #A78BFA;
+      --accent-dim: rgba(167,139,250,0.12);
+      --text:       #F2F2F7;
+      --text-muted: #9B9BAE;
+      --text-dim:   #5A5A72;
+      --green:      #34D399;
+      --yellow:     #FBBF24;
+      --red:        #EF4444;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      padding: 0 16px 80px;
+    }
+
+    .hero {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 64px 0 40px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(167,139,250,0.25);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(28px, 6vw, 48px);
+      color: var(--text);
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span { color: var(--accent); }
+
+    .hero-sub {
+      color: var(--text-muted);
+      font-size: 15px;
+      max-width: 480px;
+      margin: 0 auto 20px;
+    }
+
+    .hero-date {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+
+    .hero-date::before {
+      content: '';
+      display: inline-block;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    .content {
+      max-width: 680px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+    }
+
+    .card-label {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .card h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--text);
+      letter-spacing: -0.3px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    .card-disclaimer {
+      background: rgba(167,139,250,0.06);
+      border-color: rgba(167,139,250,0.2);
+    }
+
+    .card-disclaimer h2 { color: var(--accent); }
+
+    .card-warning {
+      background: rgba(251,191,36,0.05);
+      border-color: rgba(251,191,36,0.2);
+    }
+
+    .card-warning .card-label { color: var(--yellow); }
+    .card-warning h2 { color: var(--yellow); }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(167,139,250,0.3);
+      transition: border-color 0.2s;
+    }
+
+    a:hover { border-color: var(--accent); }
+
+    .divider { height: 1px; background: var(--border); margin: 16px 0; }
+
+    strong.hi { color: var(--text); }
+
+    .card-contact { text-align: center; }
+    .card-contact .contact-emoji { font-size: 36px; margin-bottom: 12px; }
+    .card-contact h2 { text-align: center; }
+
+    .contact-email {
+      display: inline-block;
+      margin-top: 12px;
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      padding: 10px 20px;
+      border-radius: 12px;
+      border: 1px solid rgba(167,139,250,0.2);
+      text-decoration: none;
+      border-bottom: none;
+    }
+
+    .contact-email:hover {
+      background: rgba(167,139,250,0.2);
+      border-bottom: none;
+    }
+
+    .footer {
+      max-width: 680px;
+      margin: 32px auto 0;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="hero-badge">Legal</div>
+    <h1>Terms & <span>Conditions</span></h1>
+    <p class="hero-sub">Please read these terms carefully before using Lucidd.</p>
+    <span class="hero-date">Effective date: April 8, 2026</span>
+  </div>
+
+  <div class="content">
+
+    <!-- Intro -->
+    <div class="card">
+      <div class="card-label">Agreement</div>
+      <h2>Accepting These Terms</h2>
+      <p>By downloading, installing, or using the <strong class="hi">Lucidd</strong> application ("App"), you agree to be bound by these Terms and Conditions. These terms form a legally binding agreement between you and <strong class="hi">Licvora Labs</strong> ("we", "us", or "our").</p>
+      <p>If you do not agree to these terms, do not use the App.</p>
+    </div>
+
+    <!-- Medical disclaimer -->
+    <div class="card card-disclaimer">
+      <div class="card-label">Important</div>
+      <h2>Not a Medical Service</h2>
+      <p>Lucidd is a <strong>wellness and self-improvement tool only</strong>. It does not provide medical advice, diagnosis, or treatment of any kind. Nothing in the App should be interpreted as professional psychological, psychiatric, or medical guidance.</p>
+      <p>If you are experiencing a mental health crisis or emergency, please contact a qualified healthcare professional or emergency services immediately.</p>
+    </div>
+
+    <!-- Eligibility -->
+    <div class="card">
+      <div class="card-label">Eligibility</div>
+      <h2>Who Can Use Lucidd</h2>
+      <p>You must be at least <strong class="hi">13 years old</strong> to use this App (or <strong class="hi">16 years old</strong> if you are located in the European Union). By using the App, you confirm that you meet the applicable age requirement.</p>
+      <p>If you are under 18, you confirm that you have obtained permission from a parent or legal guardian.</p>
+    </div>
+
+    <!-- Account -->
+    <div class="card">
+      <div class="card-label">Your Account</div>
+      <h2>Account Responsibilities</h2>
+      <p>When you create an account, you agree to:</p>
+      <ul>
+        <li>Provide accurate and truthful information</li>
+        <li>Keep your login credentials secure and confidential</li>
+        <li>Notify us immediately if you suspect unauthorized access to your account</li>
+        <li>Not share your account with others</li>
+      </ul>
+      <div class="divider"></div>
+      <p>You are responsible for all activity that occurs under your account.</p>
+    </div>
+
+    <!-- Service -->
+    <div class="card">
+      <div class="card-label">The Service</div>
+      <h2>What Lucidd Offers</h2>
+      <p>Lucidd provides the following features, subject to your subscription plan:</p>
+      <ul>
+        <li>Daily mood check-ins and emotional tracking</li>
+        <li>Sleep logging and wellness monitoring</li>
+        <li>Daily mindfulness challenges and articles</li>
+        <li>A private free-text journal</li>
+        <li>An AI-powered chat assistant for mental wellness support</li>
+        <li>Progress statistics and history</li>
+        <li>Personal data export</li>
+      </ul>
+      <div class="divider"></div>
+      <p>We reserve the right to modify, suspend, or discontinue any feature at any time without prior notice.</p>
+    </div>
+
+    <!-- AI -->
+    <div class="card">
+      <div class="card-label">AI Features</div>
+      <h2>AI-Generated Content</h2>
+      <p>The App uses artificial intelligence (powered by <strong class="hi">OpenAI</strong>) to generate responses in the chat assistant. You acknowledge that:</p>
+      <ul>
+        <li>AI responses are generated automatically and may not always be accurate</li>
+        <li>AI content does not constitute professional advice of any kind</li>
+        <li>We do not guarantee the accuracy, completeness, or reliability of AI-generated content</li>
+        <li>You should not make important life decisions based solely on AI responses</li>
+      </ul>
+    </div>
+
+    <!-- Subscriptions -->
+    <div class="card card-warning">
+      <div class="card-label">Subscriptions & Billing</div>
+      <h2>Premium Plan</h2>
+      <p>Lucidd offers a free tier and an optional <strong class="hi">Premium</strong> subscription that unlocks additional features including unlimited AI chat.</p>
+      <ul>
+        <li><strong class="hi">Billing:</strong> Subscriptions are billed through the Google Play Store on a recurring basis (monthly or annual, depending on the plan selected).</li>
+        <li><strong class="hi">Auto-renewal:</strong> Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current billing period.</li>
+        <li><strong class="hi">Cancellation:</strong> You can cancel at any time via your Google Play account settings. Access continues until the end of the paid period.</li>
+        <li><strong class="hi">Free trial:</strong> If a free trial is offered, it will convert to a paid subscription automatically unless cancelled before the trial ends.</li>
+        <li><strong class="hi">Refunds:</strong> Refund requests are handled by Google Play in accordance with their refund policy.</li>
+        <li><strong class="hi">Price changes:</strong> We may change subscription prices with reasonable notice. Continued use after a price change constitutes acceptance.</li>
+      </ul>
+    </div>
+
+    <!-- Acceptable use -->
+    <div class="card">
+      <div class="card-label">Acceptable Use</div>
+      <h2>What You May Not Do</h2>
+      <p>By using the App, you agree not to:</p>
+      <ul>
+        <li>Use the App for any unlawful purpose or in violation of these Terms</li>
+        <li>Attempt to reverse-engineer, decompile, or modify the App</li>
+        <li>Use automated tools to access or scrape the App</li>
+        <li>Submit false, misleading, or harmful content through the App</li>
+        <li>Attempt to gain unauthorized access to any part of the App or its infrastructure</li>
+        <li>Use the App in a way that could harm other users or third parties</li>
+      </ul>
+    </div>
+
+    <!-- Intellectual property -->
+    <div class="card">
+      <div class="card-label">Intellectual Property</div>
+      <h2>Ownership</h2>
+      <p>All content within the App — including but not limited to text, graphics, logos, icons, challenges, articles, and software — is the property of <strong class="hi">Licvora Labs</strong> and is protected by applicable copyright and intellectual property laws.</p>
+      <p>You are granted a limited, non-exclusive, non-transferable license to use the App for personal, non-commercial purposes only.</p>
+      <p>Your personal data (journal entries, check-ins, etc.) remains yours. We do not claim ownership over content you create.</p>
+    </div>
+
+    <!-- User content -->
+    <div class="card">
+      <div class="card-label">Your Content</div>
+      <h2>Journal & Personal Data</h2>
+      <p>Content you create within the App (such as journal entries, mood logs, and AI conversations) is private to your account. You retain full ownership of this content.</p>
+      <p>By using the App, you grant us a limited license to store and process your content solely for the purpose of providing the service to you.</p>
+      <p>We do not sell, share, or use your personal content for advertising purposes.</p>
+    </div>
+
+    <!-- Limitation of liability -->
+    <div class="card">
+      <div class="card-label">Liability</div>
+      <h2>Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law, <strong class="hi">Licvora Labs</strong> shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of — or inability to use — the App.</p>
+      <p>The App is provided "as is" and "as available" without warranties of any kind, either express or implied, including but not limited to fitness for a particular purpose or uninterrupted availability.</p>
+      <p>Our total liability to you for any claim arising from these Terms or your use of the App shall not exceed the amount you paid us in the 12 months preceding the claim.</p>
+    </div>
+
+    <!-- Account termination -->
+    <div class="card">
+      <div class="card-label">Termination</div>
+      <h2>Account Suspension & Termination</h2>
+      <p>We reserve the right to suspend or permanently terminate your account at our sole discretion, without prior notice, if we determine that you have violated these Terms or engaged in conduct harmful to other users or to us.</p>
+      <p>You may delete your account at any time by contacting us at <a href="mailto:getlucidd.app@gmail.com">getlucidd.app@gmail.com</a>. Upon deletion, all your personal data will be permanently removed within 14 days.</p>
+    </div>
+
+    <!-- Governing law -->
+    <div class="card">
+      <div class="card-label">Governing Law</div>
+      <h2>Jurisdiction</h2>
+      <p>These Terms are governed by and construed in accordance with the laws of <strong class="hi">Romania</strong>, without regard to its conflict of law provisions.</p>
+      <p>Any disputes arising from these Terms or your use of the App shall be subject to the exclusive jurisdiction of the courts of Romania.</p>
+    </div>
+
+    <!-- Changes -->
+    <div class="card">
+      <div class="card-label">Updates</div>
+      <h2>Changes to These Terms</h2>
+      <p>We may update these Terms from time to time. When we do, we will update the effective date at the top of this page. For significant changes, we may notify you within the App.</p>
+      <p>Continued use of the App after changes are posted constitutes your acceptance of the updated Terms.</p>
+    </div>
+
+    <!-- Privacy -->
+    <div class="card">
+      <div class="card-label">Privacy</div>
+      <h2>Privacy Policy</h2>
+      <p>Your use of the App is also governed by our <a href="../privacy-policy/">Privacy Policy</a>, which is incorporated into these Terms by reference. Please review it to understand how we collect and use your data.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="card card-contact">
+      <div class="contact-emoji">✉️</div>
+      <div class="card-label" style="text-align:center;">Contact</div>
+      <h2>Questions?</h2>
+      <p style="color:var(--text-muted);">If you have any questions about these Terms, reach out to us.</p>
+      <a class="contact-email" href="mailto:getlucidd.app@gmail.com">getlucidd.app@gmail.com</a>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>© 2026 Licvora Labs · Lucidd</p>
+  </div>
+
+</body>
+</html>

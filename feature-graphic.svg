@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 1024 500" width="1024" height="500">
+  <defs>
+
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1024" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#12101F"/>
+      <stop offset="55%"  stop-color="#1C1933"/>
+      <stop offset="100%" stop-color="#231E40"/>
+    </linearGradient>
+
+    <!-- Glow blob left -->
+    <radialGradient id="glow_l" cx="260" cy="260" r="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#7C3AED" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Glow blob right -->
+    <radialGradient id="glow_r" cx="820" cy="250" r="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#A78BFA" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#A78BFA" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Icon background -->
+    <linearGradient id="icon_bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#1E1B35"/>
+      <stop offset="100%" stop-color="#2B2347"/>
+    </linearGradient>
+
+    <!-- Iris gradient -->
+    <radialGradient id="iris" cx="50%" cy="46%" r="50%" fx="50%" fy="40%">
+      <stop offset="0%"   stop-color="#DDD6FE"/>
+      <stop offset="30%"  stop-color="#A78BFA"/>
+      <stop offset="70%"  stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#4C1D95"/>
+    </radialGradient>
+
+    <!-- Pupil -->
+    <radialGradient id="pupil" cx="48%" cy="45%" r="50%">
+      <stop offset="0%"   stop-color="#1A0E38"/>
+      <stop offset="100%" stop-color="#050210"/>
+    </radialGradient>
+
+    <!-- Limbal ring -->
+    <radialGradient id="limbal" cx="50%" cy="50%" r="50%">
+      <stop offset="75%"  stop-color="#00000000"/>
+      <stop offset="100%" stop-color="#0D0820"/>
+    </radialGradient>
+
+    <!-- Tag pill -->
+    <linearGradient id="pill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#7C3AED" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#A78BFA" stop-opacity="0.20"/>
+    </linearGradient>
+
+    <!-- Card gradient -->
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#252040"/>
+      <stop offset="100%" stop-color="#1A1630"/>
+    </linearGradient>
+
+    <!-- Separator line gradient -->
+    <linearGradient id="line_grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#A78BFA" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#A78BFA" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#A78BFA" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Clip icon rounded -->
+    <clipPath id="icon_clip">
+      <rect x="60" y="140" width="220" height="220" rx="48" ry="48"/>
+    </clipPath>
+
+  </defs>
+
+  <!-- ── BACKGROUND ── -->
+  <rect width="1024" height="500" fill="url(#bg)"/>
+
+  <!-- Ambient glows -->
+  <circle cx="260" cy="260" r="280" fill="url(#glow_l)"/>
+  <circle cx="820" cy="250" r="240" fill="url(#glow_r)"/>
+
+  <!-- Subtle grid lines (horizontal) -->
+  <g stroke="#A78BFA" stroke-width="0.4" opacity="0.06">
+    <line x1="0" y1="100" x2="1024" y2="100"/>
+    <line x1="0" y1="200" x2="1024" y2="200"/>
+    <line x1="0" y1="300" x2="1024" y2="300"/>
+    <line x1="0" y1="400" x2="1024" y2="400"/>
+    <line x1="100" y1="0" x2="100" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="300" y1="0" x2="300" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="500" y1="0" x2="500" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+    <line x1="700" y1="0" x2="700" y2="500"/>
+    <line x1="800" y1="0" x2="800" y2="500"/>
+    <line x1="900" y1="0" x2="900" y2="500"/>
+  </g>
+
+  <!-- Decorative circles top-right -->
+  <circle cx="980" cy="30"  r="90" fill="none" stroke="#A78BFA" stroke-width="0.8" opacity="0.12"/>
+  <circle cx="980" cy="30"  r="60" fill="none" stroke="#A78BFA" stroke-width="0.6" opacity="0.09"/>
+  <circle cx="980" cy="30"  r="30" fill="none" stroke="#A78BFA" stroke-width="0.5" opacity="0.07"/>
+
+  <!-- Decorative circles bottom-left -->
+  <circle cx="44"  cy="480" r="70" fill="none" stroke="#7C3AED" stroke-width="0.8" opacity="0.12"/>
+  <circle cx="44"  cy="480" r="45" fill="none" stroke="#7C3AED" stroke-width="0.6" opacity="0.09"/>
+
+
+  <!-- ══════════════════════════════════════════
+       APP ICON (left side)
+  ═════════════════════════════════════════════ -->
+  <g id="app_icon">
+    <!-- Shadow -->
+    <rect x="66" y="148" width="220" height="220" rx="48" fill="#000000" opacity="0.40"/>
+    <!-- BG -->
+    <rect x="60" y="140" width="220" height="220" rx="48" fill="url(#icon_bg)"/>
+    <!-- Border -->
+    <rect x="60" y="140" width="220" height="220" rx="48" fill="none" stroke="#A78BFA" stroke-width="1.5" opacity="0.25"/>
+
+    <!-- EYE inside icon -->
+    <g clip-path="url(#icon_clip)">
+      <!-- Sclera -->
+      <path d="M72,250 C122,155 258,155 268,250 C258,345 122,345 72,250 Z"
+            transform="translate(0,0) scale(1)"
+            fill="#1E1640"/>
+      <!-- Redrawn for correct centre: icon is 60–280 x 140–360, centre = 170,250 -->
+      <path d="M76,250 C110,162 230,162 264,250 C230,338 110,338 76,250 Z"
+            fill="#1E1640"/>
+
+      <!-- Iris -->
+      <circle cx="170" cy="250" r="62" fill="url(#iris)"/>
+      <circle cx="170" cy="250" r="62" fill="url(#limbal)"/>
+      <!-- Rings -->
+      <circle cx="170" cy="250" r="54" fill="none" stroke="#DDD6FE" stroke-width="1" opacity="0.18"/>
+      <circle cx="170" cy="250" r="45" fill="none" stroke="#C4B5FD" stroke-width="0.8" opacity="0.14"/>
+
+      <!-- Pupil -->
+      <circle cx="170" cy="250" r="30" fill="#0D0820"/>
+      <circle cx="170" cy="250" r="22" fill="url(#pupil)"/>
+
+      <!-- Eyelid lines -->
+      <path d="M76,250 C110,162 230,162 264,250"
+            fill="none" stroke="#0D0820" stroke-width="7" stroke-linecap="round"/>
+      <path d="M76,250 C110,338 230,338 264,250"
+            fill="none" stroke="#0D0820" stroke-width="5" stroke-linecap="round"/>
+
+      <!-- Highlight -->
+      <circle cx="150" cy="232" r="12" fill="white" opacity="0.85"/>
+      <circle cx="148" cy="230" r="6"  fill="white" opacity="0.98"/>
+      <!-- mini highlight -->
+      <circle cx="188" cy="265" r="5" fill="white" opacity="0.28"/>
+    </g>
+  </g>
+
+
+  <!-- ══════════════════════════════════════════
+       TEXT CONTENT (centre-left)
+  ═════════════════════════════════════════════ -->
+  <g id="text_block" font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif">
+
+    <!-- Tag pill -->
+    <rect x="314" y="130" width="152" height="26" rx="13" fill="url(#pill)" stroke="#A78BFA" stroke-width="0.8" opacity="0.7"/>
+    <text x="390" y="148" fill="#C4B5FD" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.9">MENTAL WELLNESS</text>
+
+    <!-- App name -->
+    <text x="314" y="228" fill="#FFFFFF" font-size="82" font-weight="800" letter-spacing="-2">Lucidd</text>
+
+    <!-- Dot accent on second d -->
+    <circle cx="486" cy="166" r="7" fill="#A78BFA" opacity="0.9"/>
+
+    <!-- Tagline -->
+    <text x="314" y="268" fill="#A78BFA" font-size="19" font-weight="400" opacity="0.85">Your daily mental wellness companion</text>
+
+    <!-- Divider line -->
+    <rect x="314" y="292" width="380" height="1" fill="url(#line_grad)"/>
+
+    <!-- Feature bullets -->
+    <g fill="#C4B5FD" font-size="14" font-weight="400" opacity="0.80">
+      <!-- bullet 1 -->
+      <circle cx="325" cy="319" r="3.5" fill="#A78BFA"/>
+      <text x="340" y="324">Mood tracking &amp; emotional insights</text>
+      <!-- bullet 2 -->
+      <circle cx="325" cy="349" r="3.5" fill="#A78BFA"/>
+      <text x="340" y="354">AI-powered journaling &amp; reflection</text>
+      <!-- bullet 3 -->
+      <circle cx="325" cy="379" r="3.5" fill="#A78BFA"/>
+      <text x="340" y="384">Sleep, habits &amp; wellness stats</text>
+    </g>
+
+  </g>
+
+
+  <!-- ══════════════════════════════════════════
+       MINI UI CARDS (right side)
+  ═════════════════════════════════════════════ -->
+  <g id="ui_preview" opacity="0.92">
+
+    <!-- Card 1 — Mood -->
+    <rect x="720" y="60" width="264" height="110" rx="16" fill="url(#card)" stroke="#A78BFA" stroke-width="0.8" opacity="0.9"/>
+    <!-- card header dot -->
+    <circle cx="742" cy="90" r="9" fill="#A78BFA" opacity="0.8"/>
+    <text x="758" y="95" fill="#E9D5FF" font-family="'SF Pro Display','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600">How are you feeling?</text>
+    <!-- Emoji row -->
+    <text x="732" y="147" font-size="28">😔</text>
+    <text x="774" y="147" font-size="28">😐</text>
+    <text x="816" y="147" font-size="28" opacity="0.5">🙂</text>
+    <text x="858" y="147" font-size="28" opacity="0.35">😊</text>
+    <text x="900" y="147" font-size="28" opacity="0.25">😄</text>
+    <!-- selected indicator -->
+    <rect x="768" y="153" width="38" height="3" rx="1.5" fill="#A78BFA"/>
+
+    <!-- Card 2 — Sleep -->
+    <rect x="720" y="192" width="264" height="90" rx="16" fill="url(#card)" stroke="#A78BFA" stroke-width="0.8" opacity="0.9"/>
+    <text x="742" y="220" fill="#9CA3AF" font-family="'SF Pro Display','Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="500" letter-spacing="1">SLEEP LAST NIGHT</text>
+    <text x="742" y="258" fill="#FFFFFF" font-family="'SF Pro Display','Helvetica Neue',Arial,sans-serif" font-size="32" font-weight="700">7<tspan fill="#9CA3AF" font-size="16" font-weight="400">h </tspan>30<tspan fill="#9CA3AF" font-size="16" font-weight="400">m</tspan></text>
+    <!-- sleep bar -->
+    <rect x="840" y="238" width="120" height="6" rx="3" fill="#2D2650"/>
+    <rect x="840" y="238" width="80"  height="6" rx="3" fill="#A78BFA" opacity="0.8"/>
+
+    <!-- Card 3 — AI Chat -->
+    <rect x="720" y="304" width="264" height="100" rx="16" fill="url(#card)" stroke="#A78BFA" stroke-width="0.8" opacity="0.9"/>
+    <!-- AI bubble -->
+    <rect x="740" y="322" width="180" height="32" rx="10" fill="#2D2458" opacity="0.8"/>
+    <text x="752" y="343" fill="#DDD6FE" font-family="'SF Pro Display','Helvetica Neue',Arial,sans-serif" font-size="12">How are you really doing? ✨</text>
+    <!-- user bubble -->
+    <rect x="800" y="364" width="160" height="28" rx="10" fill="#5B21B6" opacity="0.7"/>
+    <text x="812" y="382" fill="#EDE9FE" font-family="'SF Pro Display','Helvetica Neue',Arial,sans-serif" font-size="12">I'm feeling better today 🌙</text>
+
+    <!-- Card 4 — Stats bar chart -->
+    <rect x="720" y="424" width="264" height="56" rx="16" fill="url(#card)" stroke="#A78BFA" stroke-width="0.8" opacity="0.9"/>
+    <text x="742" y="445" fill="#9CA3AF" font-family="'SF Pro Display','Helvetica Neue',Arial,sans-serif" font-size="10" font-weight="500" letter-spacing="1">WEEKLY MOOD</text>
+    <!-- mini bars -->
+    <g fill="#A78BFA" opacity="0.7">
+      <rect x="800" y="448" width="14" height="22" rx="3"/>
+      <rect x="820" y="452" width="14" height="18" rx="3"/>
+      <rect x="840" y="444" width="14" height="26" rx="3"/>
+      <rect x="860" y="450" width="14" height="20" rx="3"/>
+      <rect x="880" y="446" width="14" height="24" rx="3"/>
+      <rect x="900" y="443" width="14" height="27" rx="3"/>
+      <rect x="920" y="448" width="14" height="22" rx="3"/>
+    </g>
+    <text x="742" y="468" fill="#C4B5FD" font-family="'SF Pro Display','Helvetica Neue',Arial,sans-serif" font-size="18" font-weight="700">↑ 24% <tspan fill="#6B7280" font-size="11" font-weight="400">this week</tspan></text>
+  </g>
+
+
+  <!-- ══════════════════════════════════════════
+       BOTTOM BRAND BAR
+  ═════════════════════════════════════════════ -->
+  <rect x="0" y="468" width="1024" height="32" fill="#0D0A1A" opacity="0.55"/>
+  <text x="512" y="489" fill="#6B7280"
+        font-family="'SF Pro Display','Helvetica Neue',Arial,sans-serif"
+        font-size="11" font-weight="400" text-anchor="middle" letter-spacing="1">
+    lucidd.app · Mindfulness · Journaling · AI Wellness
+  </text>
+
+</svg>

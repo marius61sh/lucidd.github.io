@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!--
+  Lucidd App Icon — Vector for Adobe Illustrator
+  Artboard: 1024 × 1024 px
+  Layers: Background / Glow / Eye White / Iris / Pupil / Highlights / Eyelids
+-->
+<svg version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 1024 1024"
+     width="1024px" height="1024px"
+     xml:space="preserve">
+
+  <!-- ═══════════════════════════════════════════════
+       DEFS — Gradients & Clip Paths
+  ════════════════════════════════════════════════ -->
+  <defs>
+
+    <!-- Background -->
+    <linearGradient id="grad_bg" x1="0" y1="0" x2="1024" y2="1024" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#1C1933"/>
+      <stop offset="100%" stop-color="#2B2347"/>
+    </linearGradient>
+
+    <!-- Iris radial -->
+    <radialGradient id="grad_iris" cx="512" cy="490" r="185" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#DDD6FE"/>
+      <stop offset="28%"  stop-color="#A78BFA"/>
+      <stop offset="65%"  stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#4C1D95"/>
+    </radialGradient>
+
+    <!-- Iris limbal ring (dark edge) -->
+    <radialGradient id="grad_limbal" cx="512" cy="512" r="185" gradientUnits="userSpaceOnUse">
+      <stop offset="78%"  stop-color="#00000000"/>
+      <stop offset="100%" stop-color="#0D0820"/>
+    </radialGradient>
+
+    <!-- Pupil -->
+    <radialGradient id="grad_pupil" cx="502" cy="498" r="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#1A0E38"/>
+      <stop offset="100%" stop-color="#060310"/>
+    </radialGradient>
+
+    <!-- Eye white (sclera) — dark tinted -->
+    <radialGradient id="grad_sclera" cx="512" cy="512" r="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#251C44"/>
+      <stop offset="100%" stop-color="#150F2E"/>
+    </radialGradient>
+
+    <!-- Ambient glow behind iris -->
+    <radialGradient id="grad_glow" cx="512" cy="512" r="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#A78BFA" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#A78BFA" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Top eyelid shadow -->
+    <linearGradient id="grad_lid_top" x1="512" y1="186" x2="512" y2="510" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#0D0820" stop-opacity="0.72"/>
+      <stop offset="100%" stop-color="#0D0820" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Bottom eyelid shadow -->
+    <linearGradient id="grad_lid_bot" x1="512" y1="838" x2="512" y2="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#0D0820" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0D0820" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Highlight main -->
+    <radialGradient id="grad_hl1" cx="447" cy="450" r="38" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="60%"  stop-color="#FFFFFF" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Highlight secondary -->
+    <radialGradient id="grad_hl2" cx="570" cy="570" r="18" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#FFFFFF" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Clip: icon rounded square -->
+    <clipPath id="clip_icon">
+      <rect x="0" y="0" width="1024" height="1024" rx="224" ry="224"/>
+    </clipPath>
+
+    <!-- Clip: eye interior (for lid overlays) -->
+    <clipPath id="clip_eye">
+      <!-- Upper arc -->
+      <path d="M148,512 C300,186 724,186 876,512 C724,838 300,838 148,512 Z"/>
+    </clipPath>
+
+  </defs>
+
+
+  <!-- ═══════════════════════════════════════════════
+       LAYER 1 — BACKGROUND
+  ════════════════════════════════════════════════ -->
+  <g id="Layer_Background" clip-path="url(#clip_icon)">
+    <rect x="0" y="0" width="1024" height="1024" fill="url(#grad_bg)"/>
+
+    <!-- Subtle corner accent blobs -->
+    <circle cx="100" cy="100" r="260" fill="#6D28D9" opacity="0.06"/>
+    <circle cx="924" cy="924" r="240" fill="#4C1D95" opacity="0.07"/>
+    <circle cx="900" cy="120" r="180" fill="#7C3AED" opacity="0.04"/>
+  </g>
+
+
+  <!-- ═══════════════════════════════════════════════
+       LAYER 2 — AMBIENT GLOW
+  ════════════════════════════════════════════════ -->
+  <g id="Layer_Glow" clip-path="url(#clip_icon)">
+    <ellipse cx="512" cy="512" rx="380" ry="240" fill="url(#grad_glow)"/>
+  </g>
+
+
+  <!-- ═══════════════════════════════════════════════
+       LAYER 3 — EYE WHITE (SCLERA)
+  ════════════════════════════════════════════════ -->
+  <g id="Layer_Sclera" clip-path="url(#clip_icon)">
+    <!--
+      Eye shape: symmetric almond
+      Top arc: control point at (512, 186)
+      Bottom arc: control point at (512, 838)
+      Left tip: 148,512   Right tip: 876,512
+    -->
+    <path id="eye_shape"
+          d="M148,512
+             C300,186 724,186 876,512
+             C724,838 300,838 148,512 Z"
+          fill="url(#grad_sclera)"/>
+
+    <!-- Inner sclera tint — slightly warmer centre -->
+    <path d="M210,512
+             C340,238 684,238 814,512
+             C684,786 340,786 210,512 Z"
+          fill="#1E1640" opacity="0.5"/>
+  </g>
+
+
+  <!-- ═══════════════════════════════════════════════
+       LAYER 4 — IRIS
+  ════════════════════════════════════════════════ -->
+  <g id="Layer_Iris" clip-path="url(#clip_icon)">
+
+    <!-- Base iris disc -->
+    <circle id="iris_base" cx="512" cy="512" r="188" fill="url(#grad_iris)"/>
+
+    <!-- Limbal ring overlay (darkens edge of iris) -->
+    <circle cx="512" cy="512" r="188" fill="url(#grad_limbal)"/>
+
+    <!-- Concentric texture rings -->
+    <circle cx="512" cy="512" r="168" fill="none" stroke="#E9D5FF" stroke-width="2.5" opacity="0.20"/>
+    <circle cx="512" cy="512" r="150" fill="none" stroke="#DDD6FE" stroke-width="2"   opacity="0.16"/>
+    <circle cx="512" cy="512" r="132" fill="none" stroke="#C4B5FD" stroke-width="1.5" opacity="0.13"/>
+    <circle cx="512" cy="512" r="114" fill="none" stroke="#A78BFA" stroke-width="1"   opacity="0.10"/>
+
+    <!-- Radial fiber lines (12 spokes, subtle) -->
+    <g id="iris_spokes" opacity="0.10" stroke="#EDE9FE" stroke-width="1.2" stroke-linecap="round">
+      <!-- 0° -->  <line x1="512" y1="324" x2="512" y2="418"/>
+      <!-- 30° --> <line x1="606" y1="349" x2="559" y2="431"/>
+      <!-- 60° --> <line x1="675" y1="418" x2="614" y2="481"/>
+      <!-- 90° --> <line x1="700" y1="512" x2="606" y2="512"/>
+      <!-- 120°--> <line x1="675" y1="606" x2="614" y2="543"/>
+      <!-- 150°--> <line x1="606" y1="675" x2="559" y2="593"/>
+      <!-- 180°--> <line x1="512" y1="700" x2="512" y2="606"/>
+      <!-- 210°--> <line x1="418" y1="675" x2="465" y2="593"/>
+      <!-- 240°--> <line x1="349" y1="606" x2="410" y2="543"/>
+      <!-- 270°--> <line x1="324" y1="512" x2="418" y2="512"/>
+      <!-- 300°--> <line x1="349" y1="418" x2="410" y2="481"/>
+      <!-- 330°--> <line x1="418" y1="349" x2="465" y2="431"/>
+    </g>
+
+  </g>
+
+
+  <!-- ═══════════════════════════════════════════════
+       LAYER 5 — PUPIL
+  ════════════════════════════════════════════════ -->
+  <g id="Layer_Pupil" clip-path="url(#clip_icon)">
+    <!-- Outer pupil (slight purple halo) -->
+    <circle cx="512" cy="512" r="102" fill="#1A0830" opacity="0.9"/>
+    <!-- Main pupil -->
+    <circle id="pupil" cx="512" cy="512" r="92" fill="url(#grad_pupil)"/>
+    <!-- Inner void -->
+    <circle cx="512" cy="512" r="74" fill="#050210"/>
+    <!-- Pupil edge definition -->
+    <circle cx="512" cy="512" r="92" fill="none" stroke="#2E1060" stroke-width="5" opacity="0.6"/>
+  </g>
+
+
+  <!-- ═══════════════════════════════════════════════
+       LAYER 6 — EYELID SHADOWS
+  ════════════════════════════════════════════════ -->
+  <g id="Layer_Eyelids" clip-path="url(#clip_icon)">
+
+    <!-- Top lid shadow — clipped to eye shape -->
+    <path d="M148,512
+             C300,186 724,186 876,512
+             L876,380
+             C724,110 300,110 148,380 Z"
+          fill="url(#grad_lid_top)"
+          clip-path="url(#clip_eye)"/>
+
+    <!-- Bottom lid shadow -->
+    <path d="M148,512
+             C300,838 724,838 876,512
+             L876,640
+             C724,914 300,914 148,640 Z"
+          fill="url(#grad_lid_bot)"
+          clip-path="url(#clip_eye)"/>
+
+    <!-- Upper lash line -->
+    <path d="M148,512 C300,186 724,186 876,512"
+          fill="none"
+          stroke="#0D0820"
+          stroke-width="18"
+          stroke-linecap="round"
+          opacity="0.85"/>
+
+    <!-- Lower lash line -->
+    <path d="M148,512 C300,838 724,838 876,512"
+          fill="none"
+          stroke="#0D0820"
+          stroke-width="12"
+          stroke-linecap="round"
+          opacity="0.70"/>
+
+    <!-- Upper lash line — inner purple sheen -->
+    <path d="M200,512 C330,218 694,218 824,512"
+          fill="none"
+          stroke="#7C3AED"
+          stroke-width="3"
+          stroke-linecap="round"
+          opacity="0.18"/>
+
+    <!-- Corner tearduct left -->
+    <ellipse cx="178" cy="512" rx="28" ry="18" fill="#0D0820" opacity="0.5"/>
+    <!-- Corner tearduct right -->
+    <ellipse cx="846" cy="512" rx="28" ry="18" fill="#0D0820" opacity="0.5"/>
+
+  </g>
+
+
+  <!-- ═══════════════════════════════════════════════
+       LAYER 7 — SPECULAR HIGHLIGHTS
+  ════════════════════════════════════════════════ -->
+  <g id="Layer_Highlights" clip-path="url(#clip_icon)">
+
+    <!-- Main highlight: large soft -->
+    <circle cx="447" cy="452" r="46" fill="white" opacity="0.14"/>
+    <!-- Main highlight: core -->
+    <circle cx="447" cy="450" r="26" fill="white" opacity="0.72"/>
+    <!-- Main highlight: bright centre -->
+    <circle cx="444" cy="447" r="12" fill="white" opacity="0.98"/>
+
+    <!-- Secondary micro highlight bottom-right -->
+    <circle cx="572" cy="568" r="14" fill="white" opacity="0.22"/>
+    <circle cx="574" cy="570" r="6"  fill="white" opacity="0.38"/>
+
+    <!-- Iris edge rim light (left) -->
+    <path d="M338,430 C356,380 390,342 440,320"
+          fill="none"
+          stroke="white"
+          stroke-width="3"
+          stroke-linecap="round"
+          opacity="0.12"/>
+
+  </g>
+
+</svg>
